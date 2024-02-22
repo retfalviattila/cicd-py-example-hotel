@@ -26,8 +26,8 @@ class TestHootel(object):
     @allure.severity(allure.severity_level.TRIVIAL)
     @allure.tag("login")
     def test_login(self):
-        menu.btn = WebDriverWait(self.browser, 5, 0.5).until(EC.visibility_of_element_clickable((By.XPath, '//span[@class="navbar-toggler-icon"]')))
-        menu.btn.click()
+        menu_btn= WebDriverWait(self.browser, 5, 0.5).until(EC.visibility_of_element_clickable((By.XPath, '//span[@class="navbar-toggler-icon"]')))
+        menu_btn.click()
         login_btn = self.browser.find_element(By.XPATH, '//a[@class="nav-link"]')
         login_btn.click()
 
